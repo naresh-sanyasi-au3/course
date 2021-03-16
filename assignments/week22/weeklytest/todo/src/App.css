@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+
+body{
+background-color: aquamarine;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin-top: 50px;
+  margin-left: 30%;
+  color: palevioletred;
+}
+
+h2 {
+  font-family: sans-serif;
+  color: black;
+}
+
+.custom {
+  font-family: serif;
+  color: blue;
+  font-size: 20px;
+}
+

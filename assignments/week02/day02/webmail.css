@@ -1,0 +1,79 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-image: url(https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#logo {
+    height: 70px;
+    width: 150px;
+    display: block;
+    margin-left: 33px;
+}
+.navbar, .content {
+display: inline-block;
+position: absolute;
+top: 80px;
+}
+.navbar {
+    left: 20px;
+    background-color: aquamarine;
+    height: 330px;
+    width: 150px;
+    margin: 20px;
+    padding: 10px;
+}
+.content {
+    left: 800px;
+    height: 330px;
+    width: 450px;
+    margin-right:20px;
+    padding: 10px;
+    background-color: aquamarine;
+}
+table {
+    font-size: 24px;
+    line-height: 1.75;
+    width: 100%;
+}
+th {
+    text-align: left;
+}
+#ad {
+    position: absolute;
+    bottom: 15px;
+    left: 300px;
+    height: 100px;
+    width: 700px;
+    background-repeat: no-repeat;
+}
+ul {
+    font-size: 24px;
+    list-style: none;
+    line-height: 1.5;
+}
+ul li {
+background-color: white;
+margin-bottom: 10px;
+padding: 5px;
+}
+table {
+    border: 1px solid black;
+    height: 260px;
+}
+tr {
+    outline: 1px solid black;
+}
+li:hover {
+    background-color: black;
+    color: white;
+}
+tr {
+    background-color: white;
+}
+tr:hover {
+    background-color: black;
+    color: white;
+}

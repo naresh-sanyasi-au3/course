@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  
+    <title>weekly test04</title>
+  </head>
+<body>
+  <p> <br><br></p>
+
+    <div class="container">
+
+    <h1 style=" text-align: center; background-color: blue">BOOK LIBRARY</h1><br>
+    <input type="text" class="form-control" id="input" placeholder="SEARCH LANGUAGE"><br>
+    <button type="submit" class="btn-primary" id="search" style="text-align: center; width:200px;">search</button><br><br>
+    <div class="table-responsive">
+
+    <table class=" table table-bordered table-striped w-auto"  id="booktable">
+      <thead style="background-color: rgb(47, 143, 98); ">
+<tr>
+    <th style="width: 18%; text-align: center">title</th>
+    <th style="width: 12%; text-align: center">author</th>
+    <th style="width: 10%; text-align: center">country</th>
+    <th style="width: 10%; text-align: center">language</th>
+    <th style="width: 30%; text-align: center">link</th>
+    <th style="width: 10%; text-align: center">pages</th>
+    <th style="width: 10%; text-align: center">year</th>
+</tr>
+<tbody style="text-align:center">
+  <tr ></tr>
+</tbody>
+</thead>
+
+    </table>
+  </div>
+</div>
+<script type="text/javascript">
+
+  $.ajax({
+    url:"https://raw.githubusercontent.com/attainu-nightingale/nightingale-course-module/master/assignments/data/books.json",
+    type:"GET",
+    dataType:"json",
+    success: function(json){
+
+      var books = json
+      $('#search').on("click",function(){
+
+        var userInput = $('#input').val()
+        var selectedlang = []
+        $("tbody").html("")
+        for(i=0;i<books.length;i++){
+          if(books[i].language.toLowerCase() == userInput.toLowerCase()){
+
+            $("tbody").append("<tr>");
+            $("tr").append("<td>" +books[i].title+ "</td>");
+            $("tr").append("<td>" +books[i].author+ "</td>");
+            $("tr").append("<td>" +books[i].country+ "</td>");
+            $("tr").append("<td>" +books[i].language+ "</td>");
+            $("tr").append("<td>" +books[i].link+ "</td>");
+            $("tr").append("<td>" +books[i].pages+ "</td>");
+            $("tr").append("<td>" +books[i].year+ "</td>");
+            
+            $("tbody").append("</tr>");
+          }
+        }
+      });
+    },
+    error:function(error){
+      console.log("error happened")
+    }
+  })
+    </script>
+
+ 
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous">
+  </script>
+  </body>
+</html>

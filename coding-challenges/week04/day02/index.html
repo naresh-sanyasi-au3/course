@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>hamming</title>
+  </head>
+  <body>
+    <script>
+function hamming (str1 , str2) {
+var a1 = str1.length
+var a2 = str2.length
+var count = 0
+if(a1!=a2)
+{
+  return "not valid"
+}
+else {
+  for (var i = 0 ; i < a1 ; i++){
+    if(str1.charAt(i) != str2.charAt(i)){
+      count++
+    }
+  }
+  return count
+}
+}
+console.log(hamming("karolin","kathrin"));
+console.log(hamming("karolin","kerstin"));
+console.log(hamming("1011101","1001001"));
+console.log(hamming("2173896","2233796"));
+
+    </script>
+  </body>
+</html>

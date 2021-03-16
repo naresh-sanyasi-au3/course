@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>login</title>
+</head>
+        
+    <div class="container" style="width:300px;position:absolute;
+    left: 120px; top: 80px;">
+    <div class="card">
+        <div class="card-body" style="background-color: #00a7b5;">
+<form action="/login"  method="POST">
+    <div class="form-group">
+        <input type="text" name="email" class="form-control" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <input type="password" name="password" class="form-control"placeholder="Password">
+    </div>
+    <input type="submit" value="login" class="btn btn-primary">
+</form>
+</div>
+</div>
+</div>
+<div class="container" style="width:300px;position:absolute;
+right: 120px; top: 80px;">
+        <div class="card-body" style="background-color: #00a7b5;">
+
+    <form name="myform" action="/signup" onsubmit="return validation()" method="POST">
+      <div class="form-group">
+          <input type="text" name="fullname" id="fullname" class="form-control" placeholder="Full Name">
+          <span id="fname" class="text-danger"></span>
+ </div>
+ <div class="form-group">
+      <input type="email" name="email" id="email" class="form-control"placeholder="Email">
+      <span id="emails" class="text-danger"></span>
+</div>
+<div class="form-group">
+  <input type="number" name="mobile" id="mobile" class="form-control"placeholder="Mobile">
+  <span id="mobiles" class="text-danger"></span>
+</div>
+<div class="form-group">
+  <input type="password" name="password" id="password" class="form-control"placeholder="Password">
+  <span id="passwords" class="text-danger"></span>
+</div>
+<div class="form-group">
+  <input type="password" name="confirmpassword" id="Confirmpassword" class="form-control"placeholder="Confirm Password">
+  <span id="confirmpasswords" class="text-danger"></span>
+</div>
+<div class="form-group  text-center form-check">
+  <input
+    type="checkbox"class="form-check-input"id="exampleCheck1"name="Alert"value="true"/>
+  <label class="form-check-label" for="exampleCheck1"
+    >Alert</label>
+</div>
+<input type="submit" value="Signup" class="btn btn-primary">
+</form>
+</div>
+<script type="text/javascript">
+function validation() {
+  var fullname = document.forms["myform"]["fullname"].value;
+  var email = document.forms["myform"]["email"].value;
+  var mobile = document.forms["myform"]["mobile"].value;
+  var password = document.forms["myform"]["password"].value;
+  var confirmpassword = document.forms["myform"]["confirmpassword"].value;
+
+
+
+  if (fullname == "") {
+    document.getElementById ('fname').innerHTML = "please fill fullname";
+    return false;
+  }
+
+
+if(fullname.length >= 25){
+  document.getElementById ('fname').innerHTML = "please fill below 25 character";
+  return false;
+}
+if(email == " "){
+  document.getElementById('emails').innerHTML = "please fill email";
+  return false;
+}
+if(email.indexOf('@') <= 0){
+  document.getElementById('emails').innerHTML = "please fill correct email";
+  return false;
+}
+if(email.indexOf('@') <= 0){
+  document.getElementById('emails').innerHTML = "please fill correct email";
+  return false;
+}
+if(mobile == " "){
+  document.getElementById('mobiles').innerHTML = "please fill mobile no";
+  return false;
+}
+if(mobile.length != 10){
+  document.getElementById('mobiles').innerHTML = "invalid mobile no";
+  return false;
+}
+if(password == ""){
+  document.getElementById('passwords').innerHTML = "please fill password";
+  return false;
+}
+
+if(confirmpassword == ""){
+  document.getElementById('confirmpasswords').innerHTML = "please fill correct password";
+  return false;
+}
+if(confirmpassword != password){
+  document.getElementById('confirmpasswords').innerHTML = "password doesnot match";
+  return false;
+}
+
+}
+</script>
+</body>
+</html>

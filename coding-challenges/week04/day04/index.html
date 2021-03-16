@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+  
+    <title>week04 day04</title>
+  </head>
+<body>
+     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+
+<script>
+
+var begginingLetter = prompt("Enter a Letter")
+var selectedCities = []
+$.ajax({
+    url: 'https://raw.githubusercontent.com/attainu-nightingale/nightingale-course-module/master/coding-challenges/data/cities.json',
+    type: 'GET',
+    dataType: 'json',
+    success: function (json) {
+        var citiesArray = json
+        for(var i=0; i < citiesArray.length; i++){
+            if(citiesArray[i].name.charAt(0).toLowerCase() == begginingLetter){
+                selectedCities.push(citiesArray[i].name)
+            }
+        }
+        document.write(selectedCities)
+        console.log(selectedCities)
+    },
+    error: function(error){
+        document.write("error happend")
+    }
+})
+
+</script>      
+  </body>
+ </html>

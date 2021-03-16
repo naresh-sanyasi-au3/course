@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>formatting time</title>
+</head>
+
+<body>
+  <script>
+    function formatTime(timestamp) {
+      let seconds = timestamp % 60
+      let minutes = Math.floor(timestamp / 60) % 60
+      let hours = Math.floor(timestamp / 3600)
+
+      return hours + ":" + minutes + ":" + seconds
+    }
+    document.write(formatTime(365895))
+
+  </script>
+</body>
+
+</html>

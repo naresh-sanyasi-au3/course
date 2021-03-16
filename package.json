@@ -1,0 +1,23 @@
+{
+  "name": "naresh-sanyasi-au3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/attainu-instructor/naresh-sanyasi-au3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/attainu-instructor/naresh-sanyasi-au3/issues"
+  },
+  "homepage": "https://github.com/attainu-instructor/naresh-sanyasi-au3#readme",
+  "description": "",
+  "dependencies": {
+    "react-redux": "^7.1.3"
+  }
+}

@@ -1,0 +1,18 @@
+body {
+    background-image: url(https://www.cedarberg-travel.com/wp-content/uploads/Praslin-Anse-Lazio-beach-BS41783503.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    text-align: center;
+    font-size: 45px;
+    }
+ p {
+     font-size: 30px;
+ }   
+ div {
+     background-color: aqua
+ }
+ div ul {
+     font-size: 20px;
+ }
